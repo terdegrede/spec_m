@@ -58,6 +58,6 @@ end
     axis([Trng(1) Trng(end) 0 40])
     axis square
 
-    % save_pic(B, N, Trng(end))
+    save_pic(B, N, Trng(end))
     % save_dat(B, N, Trng(end), dv1, dv2, dnoc1, dnoc2)
     close all

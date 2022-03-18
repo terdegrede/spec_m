@@ -40,6 +40,6 @@ GRB.YData = ydata;
 GRB.LineStyle = '--';
 GRB.EdgeColor = [1 0 0]; % red
 
-% save_grph(B, N, T)
-% close all
+save_grph(B, N, T)
+close all
 end
