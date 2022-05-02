@@ -1,4 +1,4 @@
-function P = ABassort_fn(M, N, A, B, mu, T, dS, dB)
+function P = ABassort_fn(M, N, A, B, mu, T, dS, dB, mm)
 % This function allows to compute -and save data from- the model
 % considering controlled A (assortativity) and B (similarity) lengths.
 %
@@ -11,6 +11,7 @@ function P = ABassort_fn(M, N, A, B, mu, T, dS, dB)
 %           mu: Mutation rate
 %           dS: Genetic distance treshold for mating with full genome
 %           dB: Genetic distance treshold for mating with traits
+%           mm: Numer of run. Parameter used for several executions.
 %
 % Outputs:
 %           P : Final population
@@ -31,7 +32,7 @@ function P = ABassort_fn(M, N, A, B, mu, T, dS, dB)
 % dB = 0.05*B;        % Treshold for reproductive isolation
 % dS = dB*N/B;        % Treshold for genetic distance
 %
-% P = assort_fn(M, N, A,B, mu, T, dS, dB);
+% P = ABassort_fn(M, N, A,B, mu, T, dS, dB);
 
 
 %% Genetic distance for mating
@@ -84,6 +85,6 @@ for t = 0: T
     P = Pn;
     
     % Saving data: 
-    save_parfor(M, N, A, B, t, mu, P)
+    save_parfor(M, N, A, B, t, mu, P, mm)
     
 end
