@@ -1,7 +1,7 @@
-clc, clearvars
 % Scripts for MM runs.
-MM = 100; 
 %% N =2500, B = 1000, A = 500
+clc, clearvars, close all
+MM = 100; 
 parfor mm = 1:MM
 
     M = 500;            % Numer of individuals
@@ -18,7 +18,9 @@ parfor mm = 1:MM
     P = ABassort_fn(M, N, A,B, mu, T, dS, dB, mm);
 end
 
-%% N =2500, B = 1000, A = 150
+%% N =2500, B = 1000, A = 150 -
+clc, clearvars, close all
+MM = 100; 
 parfor mm = 1:MM
     M = 500;            % Numer of individuals
     N = 2500;           % Genes per individual
@@ -36,6 +38,8 @@ parfor mm = 1:MM
 end
 
 %% N =2500, B = 500, A = 500
+clc, clearvars, close all
+MM = 100; 
 parfor mm = 1:MM
     M = 500;            % Numer of individuals
     N = 2500;           % Genes per individual
@@ -53,6 +57,8 @@ parfor mm = 1:MM
 end
 
 %% N =2500, B = 500, A = 150
+clc, clearvars, close all
+MM = 100; 
 parfor mm = 1:MM
     M = 500;            % Numer of individuals
     N = 2500;           % Genes per individual
@@ -70,6 +76,8 @@ parfor mm = 1:MM
 end
 
 %% N =2500, B = 20, A = 20
+clc, clearvars, close all
+MM = 100; 
 parfor mm = 1:MM
     M = 500;            % Numer of individuals
     N = 2500;           % Genes per individual

@@ -1,0 +1,9 @@
+function [NOC_N, NOC_A, NOC_B] = load_NOC(M, N, A, B, T, mu, mm)
+
+load(['data_fn/NOC_M_' num2str(M) '_N_' num2str(N) '_A_' num2str(A)... 
+    '_B_' num2str(B) '_T_' num2str(T) '_mu_' num2str(mu)...
+    '_mm_' num2str(mm) '.mat']...
+     ,'NOC_N','NOC_A','NOC_B')
+
+
+end
