@@ -1,4 +1,4 @@
-function P = fn_spec(M, N, B, mu, T, dS, dB)
+function P = fn_spec(M, N, B, mu, T, dS, dB, mm)
 % This function allows to compute -and save data from- the model considering 
 % assortativity by mating traits. 
 %
@@ -35,13 +35,6 @@ else
     G = dB;
 end
 
-% %% Calculations
-% q0 = 1/(1+ 4*mu*M); % Full genome mean overlap
-% % q_min = 1-2*G/N;    % Full genome similarity treshold (qmin>= q0)%
-% q_min = 1-2*dS/N;    % Full genome similarity treshold (qmin>= q0)%
-% qb_min = 1-2*G/B;   % Mating trait similarity treshold
-
-
 %% Allocation
 P = zeros(M, N);
 rm = zeros(1, N);
@@ -49,7 +42,7 @@ Pn = zeros(M, N);
 
 %% Main loop
 for t = 0: T
-    disp(t(mod(t, 50)==0)) % Print generation
+    % disp(t(mod(t, 50)==0)) % Print generation
     
     PB = P(:, end-B+1:end); % Set of mating segments  (full genome or mating trait) for comparison
 
@@ -85,6 +78,8 @@ for t = 0: T
     P = Pn;
     
     % Saving data: 
-    save_parfor(M, N, B, t, mu, P)
+    % save_parfor(M, N, B, t, mu, P)
+    A = N+ 1;
+    save_parfor(M, N, A, B, T, mu, P, mm)
     % Saving for each generation
 end
