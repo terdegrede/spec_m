@@ -1,4 +1,4 @@
-function clust_data_fn(A, B, M, N, mu, Trng, mm)
+function clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
 % This function allows to generate data from a population which evolves
 % along a given number of generations
 %
@@ -23,7 +23,7 @@ function clust_data_fn(A, B, M, N, mu, Trng, mm)
 % Closeness treshold
 dB = 0.05*B;        % Treshold for reproductive isolation
 dS = dB*N/B;        % Treshold for genetic distanced
-dA = 0.05*A;
+% dA = 0.05*A;
 % Allocation
 NOC_N = zeros(1, length(Trng));    % Number of clusters - Full genome
 NOC_B = NOC_N;                     % Number of clusters - B segment
