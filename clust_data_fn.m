@@ -66,7 +66,7 @@ parfor n = 1:length(Trng)
     NOC_B(n) = length(CCB);      %MS
     NOC_A(n) = length(CCA);      %MS
 
-    disp(tmp)
+    % disp(tmp)
 end
 
 save_NOC(M, N, A, B, Trng(end), mu, NOC_A, NOC_B, NOC_N, mm)
