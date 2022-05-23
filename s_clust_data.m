@@ -1,34 +1,4 @@
 % Script to get number of cluster in each generation of one run.
-
-%% Case 1
-clc, clearvars
-
-M = 500;            % Numer of individuals
-N = 2500;           % Genes per individual
-
-% 
-B = 2200;            % Mating segment
-A = 300;
-mu = 0.001;
-T = 200;
-
-fig_avg_fn(M, N, B, A, mu, T);
-
-%% Case 2
-clc, clearvars
-
-M = 500;            % Numer of individuals
-N = 2500;           % Genes per individual
-
-% 
-B = 1600;            % Mating segment
-A = 900;
-
-mu = 0.001;         % Mutation rate
-T = 200;            % Numer of generations
-
-fig_avg_fn(M, N, B, A, mu, T);
-
 % % % % Case 3
 % % % clc, clearvars
 % % % 
@@ -50,16 +20,16 @@ fig_avg_fn(M, N, B, A, mu, T);
 % % %     clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
 % % % end
 
-%% Case 4
+%% Case 1
 clc, clearvars
 
 M = 500;            % Numer of individuals
-N = 2500;           % Genes per individual
+N = 10000;           % Genes per individual
 
 % 
-B = 100;            % Mating segment
-A = 2400;
-dA = 120;
+B = 9000;            % Mating segment
+A = N-M;
+dA = 0.04*A;
 %
 
 mu = 0.001;         % Mutation rate
@@ -67,22 +37,83 @@ T = 200;            % Numer of generations
 Trng = 1: T;
 
 parfor mm = 1: 100
-
     clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
 end
+fig_avg_fn(M, N, B, A, mu, T);
 
+%% Case 2
+clc, clearvars
+
+M = 500;            % Numer of individuals
+N = 10000;           % Genes per individual
+
+% 
+B = 5000;            % Mating segment
+A = N-M;
+dA = 0.04*A;
+%
+
+mu = 0.001;         % Mutation rate
+T = 200;            % Numer of generations
+Trng = 1: T;
+
+parfor mm = 1: 100
+    clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
+end
+fig_avg_fn(M, N, B, A, mu, T);
+
+%% Case 3
+clc, clearvars
+
+M = 500;            % Numer of individuals
+N = 10000;           % Genes per individual
+
+% 
+B = 2000;            % Mating segment
+A = N-M;
+dA = 0.04*A;
+%
+
+mu = 0.001;         % Mutation rate
+T = 200;            % Numer of generations
+Trng = 1: T;
+
+parfor mm = 1: 100
+    clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
+end
+fig_avg_fn(M, N, B, A, mu, T);
+
+%% Case 4
+clc, clearvars
+
+M = 500;            % Numer of individuals
+N = 10000;           % Genes per individual
+
+% 
+B = 9000;            % Mating segment
+A = 100;
+dA = 0.04*A;
+%
+
+mu = 0.001;         % Mutation rate
+T = 200;            % Numer of generations
+Trng = 1: T;
+
+parfor mm = 1: 100
+    clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
+end
 fig_avg_fn(M, N, B, A, mu, T);
 
 %% Case 5
 clc, clearvars
 
 M = 500;            % Numer of individuals
-N = 2500;           % Genes per individual
+N = 10000;           % Genes per individual
 
 % 
-B = 2200;            % Mating segment
-A = 50;
-dA = 1;
+B = 5000;            % Mating segment
+A = 100;
+dA = 0.04*A;
 %
 
 mu = 0.001;         % Mutation rate
@@ -92,19 +123,18 @@ Trng = 1: T;
 parfor mm = 1: 100
     clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
 end
-
 fig_avg_fn(M, N, B, A, mu, T);
 
 %% Case 6
 clc, clearvars
 
 M = 500;            % Numer of individuals
-N = 2500;           % Genes per individual
+N = 10000;           % Genes per individual
 
 % 
-B = 1600;            % Mating segment
-A = 50;
-dA = 1;
+B = 2000;            % Mating segment
+A = 100;
+dA = 0.04*A;
 %
 
 mu = 0.001;         % Mutation rate
@@ -114,20 +144,39 @@ Trng = 1: T;
 parfor mm = 1: 100
     clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
 end
-
 fig_avg_fn(M, N, B, A, mu, T);
 
+%% Case 7
+clc, clearvars
+
+M = 500;            % Numer of individuals
+N = 10000;           % Genes per individual
+
+% 
+B = 9000;            % Mating segment
+A = N+ 1;
+dA = 0.04*A;
+%
+
+mu = 0.001;         % Mutation rate
+T = 200;            % Numer of generations
+Trng = 1: T;
+
+parfor mm = 1: 100
+    clust_data_fn2(A, B, M, N, mu, Trng, mm, dA)
+end
+fig_avg_fn(M, N, B, A, mu, T);
 
 %% Case 8
 clc, clearvars
 
 M = 500;            % Numer of individuals
-N = 2500;           % Genes per individual
+N = 10000;           % Genes per individual
 
 % 
-B = 100;            % Mating segment
-A = 50;
-dA = 1;
+B = 5000;            % Mating segment
+A = N+ 1;
+dA = 0.04*A;
 %
 
 mu = 0.001;         % Mutation rate
@@ -135,10 +184,30 @@ T = 200;            % Numer of generations
 Trng = 1: T;
 
 parfor mm = 1: 100
-    clust_data_fn(A, B, M, N, mu, Trng, mm, dA)
+    clust_data_fn2(A, B, M, N, mu, Trng, mm, dA)
 end
 fig_avg_fn(M, N, B, A, mu, T);
 
+%% Case 9
+clc, clearvars
+
+M = 500;            % Numer of individuals
+N = 10000;           % Genes per individual
+
+% 
+B = 2000;            % Mating segment
+A = N+ 1;
+dA = 0.04*A;
+%
+
+mu = 0.001;         % Mutation rate
+T = 200;            % Numer of generations
+Trng = 1: T;
+
+parfor mm = 1: 100
+    clust_data_fn2(A, B, M, N, mu, Trng, mm, dA)
+end
+fig_avg_fn(M, N, B, A, mu, T);
 
 % %% 
 % % parfor mm = 1: 100
