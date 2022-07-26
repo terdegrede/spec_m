@@ -17,7 +17,7 @@ P = -1*ones(M, F);
 Pn = P;
 if GF == F + 1 % Homogeneous
     A = 1; C = A;
-elseif GF == 0.5*F % DH
+elseif GF == 0.05*F % DH
     A = 2; C = A;
 end
 %% Main loop

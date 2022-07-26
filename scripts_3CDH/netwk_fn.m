@@ -1,4 +1,4 @@
-function [xdata, ydata] =...
+function [xdata, ydata, NOC] =...
     netwk_fn(M, F, C, A, T, mu, G, mm, c, lstyle, ecolor, xinput, yinput)
 % netwk_fn(M, F, C, A, T, mu, G, mm, c, lstyle, ecolor, xinput, yinput)
 %
@@ -27,6 +27,7 @@ elseif c == 4
 end
 
 figure('WindowState','maximized', 'Visible','on');
+DR(DR <= G) = 1;
 DR(DR > G) = 0;
 GR = graph(DR, 'upper' ,'omitselfloops');
 GR_h = plot(GR);
@@ -44,6 +45,10 @@ if yinput ~=0
     GR_h.XData = xinput;
     GR_h.YData = yinput;
 end
+
+% Number of clusters
+[~, CGR] = conncomp(GR);
+NOC = length(CGR);
 end
 
 

@@ -8,7 +8,7 @@ GF = 0.05*F;
 mm = 1;             % Run index
 
 % Full genome 
-[xdata, ydata]...
+[xdata, ydata, ~]...
     =netwk_fn(M, F, 2, 2, T, mu, 0.05*F, mm, 1, '-', [1 0 0], 0, 0);
 % 
 % Compatibility 
@@ -28,7 +28,7 @@ GC = 0.05*C;        % Compatibility Threshold
 mm = 1;             % Run index
 
 % Full genome 
-[xdata2, ydata2]...
+[xdata2, ydata2, ~]...
     =netwk_fn(M, F, C, A, T, mu, 0.05*F, mm, 1, '-', [0 1 0], 0, 0);
              
 % Compatibility 
@@ -48,7 +48,7 @@ GC = 0.05*C;        % Compatibility Threshold
 mm = 1;             % Run index
 
 % Full genome 
-[xdata2, ydata2]...
+[xdata2, ydata2, ~]...
     =netwk_fn(M, F, C, A, T, mu, 0.05*F, mm, 1, '-', [0 1 0], 0, 0);
              
 % Compatibility 
@@ -66,7 +66,7 @@ GF = 0.05*F;
 mm = 1;             % Run index
 
 % Full genome 
-[xdata, ydata]...
+[xdata, ydata, ~]...
     =netwk_fn(M, F, 2, 2, T, mu, 0.05*F, mm, 1, '-', [1 0 0], 0, 0);
 % 
 % Compatibility 

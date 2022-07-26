@@ -6,7 +6,7 @@ mu = 1e-3;%2.5e-3;          % Mutation rate
 T = 500;            % Number of generations
 mm = 1;             % Run index
 
-P = asex_fn(M, F, mu, T, mm);
+% P = asex_fn(M, F, mu, T, mm);
 
 %% Homogeneous population model
 clc, clearvars, close all
@@ -17,7 +17,7 @@ T = 500;            % Number of generations
 GF = F + 1;
 mm = 1;             % Run index
 
-P = sex_fn(M, F, mu, T, GF, mm);
+% P = sex_fn(M, F, mu, T, GF, mm);
 
 %% DH model
 clc, clearvars, close all
