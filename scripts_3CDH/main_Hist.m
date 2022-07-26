@@ -3,13 +3,13 @@ clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
 mu = 1e-3;%2.5e-3;          % Mutation rate
-T = 500;            % Number of generations
+T = 1000;            % Number of generations
 mm = 1;             % Run index
 
 % Histogram animation
 ax = [0 1 0 0.25];
 figure
-for t = 500: T
+for t = T: T
 h = hists_fn(M, F, 0, 0, t, mu, 0, mm, ax, 'hamming', 'asex');
 axis square
 drawnow
@@ -21,7 +21,7 @@ clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
 mu = 1e-3;%2.5e-3;          % Mutation rate
-T = 500;            % Number of generations
+T = 1000;            % Number of generations
 GF = F + 1;
 mm = 1;             % Run index
 
@@ -39,7 +39,7 @@ clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
 mu = 1e-3;%2.5e-3;          % Mutation rate
-T = 500;            % Number of generations
+T = 1000;            % Number of generations
 GF = 0.05*F;
 mm = 1;             % Run index
 
