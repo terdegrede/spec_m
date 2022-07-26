@@ -1,4 +1,5 @@
-%% Asexual model
+%% Asexual model 
+% Fig1a.
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
@@ -17,6 +18,7 @@ end
 
 
 %% Homogeneous population model
+% Fig1b.
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
@@ -35,6 +37,7 @@ drawnow
 end
 
 %% DH
+% Fig1c.
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual

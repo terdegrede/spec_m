@@ -1,4 +1,5 @@
 %% DH
+% Fig2a.
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
@@ -16,7 +17,7 @@ mm = 1;             % Run index
      );
 
 %% Assortativity
-
+% Fig2c.
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 2500;            % Genes per individual
@@ -36,7 +37,7 @@ mm = 1;             % Run index
      );
 
 %% Assortativity 2
-
+% Fig2b.
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 2500;            % Genes per individual
