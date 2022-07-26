@@ -15,7 +15,11 @@ function  P = sex_fn(M, F, mu, T, GF, mm)
 %% Allocation
 P = -1*ones(M, F);
 Pn = P;
-
+if GF == F + 1 % Homogeneous
+    A = 1; C = A;
+elseif GF == 0.5*F % DH
+    A = 2; C = A;
+end
 %% Main loop
 for t = 0: T
 
@@ -23,7 +27,7 @@ for t = 0: T
     dF = diag(nan*ones(1, M)) + pdist2(P, P, 'hamming')*F;
 
     % Saving data in genertion t
-    saveP_fn(M, F, 0, 0, t, mu, P, dF, 0, 0, 0, GF, mm)
+    saveP_fn(M, F, C, A, t, mu, P, dF, 0, 0, 0, GF, mm)
 
     m = 1;
     while m <= M

@@ -2,23 +2,25 @@
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
-mu = 2.5e-3;%2.5e-3;          % Mutation rate
+mu = 1e-3;%2.5e-3;          % Mutation rate
 T = 500;            % Number of generations
 mm = 1;             % Run index
 
 % Histogram animation
 ax = [0 1 0 0.25];
 figure
-for t = 0: T
-h = hists_fn(M, F, 0, 0, t, mu, 0, mm, ax, 'overlap', 'asex');
+for t = 500: T
+h = hists_fn(M, F, 0, 0, t, mu, 0, mm, ax, 'hamming', 'asex');
+axis square
 drawnow
 end
+
 
 %% Homogeneous population model
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
-mu = 2.5e-3;%2.5e-3;          % Mutation rate
+mu = 1e-3;%2.5e-3;          % Mutation rate
 T = 500;            % Number of generations
 GF = F + 1;
 mm = 1;             % Run index
@@ -26,8 +28,9 @@ mm = 1;             % Run index
 % Histogram animation
 ax = [0 1 0 0.25];
 figure
-for t = 0: T
-h = hists_fn(M, F, 0, 0, t, mu, GF, mm, ax, 'hamming', 'homo');
+for t = T: T
+h = hists_fn(M, F, 1, 1, t, mu, GF, mm, ax, 'hamming', 'homo');
+axis square
 drawnow
 end
 
@@ -35,7 +38,7 @@ end
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 10000;            % Genes per individual
-mu = 2.5e-3;%2.5e-3;          % Mutation rate
+mu = 1e-3;%2.5e-3;          % Mutation rate
 T = 500;            % Number of generations
 GF = 0.05*F;
 mm = 1;             % Run index
@@ -43,8 +46,9 @@ mm = 1;             % Run index
 % Histogram animation
 ax = [0 1 0 0.25];
 figure
-for t = 0: T
-h = hists_fn(M, F, 0, 0, t, mu, GF, mm, ax, 'overlap', 'sexu');
+for t = T: T
+h = hists_fn(M, F, 2, 2, t, mu, GF, mm, ax, 'hamming', 'sexu');
+axis square
 drawnow
 end
 %% Assortativity
@@ -55,7 +59,7 @@ M = 500;            % Number of individuals
 F = 2500;            % Genes per individual
 C = 100;
 A = 100;
-mu = 2.5e-3;%2.5e-3;          % Mutation rate
+mu = 1e-3;%2.5e-3;          % Mutation rate
 T = 500;            % Number of generations
 GC = 0.05*C;
 mm = 1;             % Run index
