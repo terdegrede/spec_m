@@ -8,7 +8,7 @@ T = 500;            % Number of generations
 GC = 0.05*C;        % Compatibility Threshold
 mm = 1;             % Run index
 
-
+    
 % Alloc
 NOC_F = zeros(1, T);
 NOC_C = NOC_F; NOC_A = NOC_C; NOC_N = NOC_A;

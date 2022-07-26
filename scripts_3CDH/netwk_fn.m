@@ -26,7 +26,7 @@ elseif c == 4
 
 end
 
-figure('WindowState','maximized', 'Visible','on');
+figure('WindowState','maximized', 'Visible','off');
 DR(DR <= G) = 1;
 DR(DR > G) = 0;
 GR = graph(DR, 'upper' ,'omitselfloops');
