@@ -34,7 +34,7 @@ for t = 1:T
 %%
 % Neutral
 [~, ~, NOC_N(t)]...
-    =netwk_fn(M, F, C, A, t, mu, 0.05*N, mm, 4, '-', [0 1 0], 0, 0);
+    =netwk_fn(M, F, C, A, t, mu, 0.05*(F- A- C), mm, 4, '-', [0 1 0], 0, 0);
 
 
 end
