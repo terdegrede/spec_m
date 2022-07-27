@@ -68,5 +68,6 @@ T = 500;            % Number of generations
 GC = 0.05*C;
 
 parfor mm = 2: 75
-    P = assor_fn(M, F, C, A, mu, T, GC, mm);   
+     P = assor_fn(M, F, C, A, mu, T, GC, mm);   
 end
+
