@@ -49,6 +49,8 @@ GR = graph(DR, 'upper' ,'omitselfloops');
 % Number of clusters
 [~, CGR] = conncomp(GR);
 NOC = length(CGR);
+xdata= 0;
+ydata = 0;
 end
 
 
