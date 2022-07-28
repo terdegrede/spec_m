@@ -26,25 +26,25 @@ elseif c == 4
 
 end
 
-figure('WindowState','maximized', 'Visible','off');
+% figure('WindowState','maximized', 'Visible','off');
 DR(DR <= G) = 1;
 DR(DR > G) = 0;
 GR = graph(DR, 'upper' ,'omitselfloops');
-GR_h = plot(GR);
-axis square
+% GR_h = plot(GR);
+% axis square
 
-GR_h.NodeLabel = {};
-GR_h.EdgeAlpha = 1;
-GR_h.EdgeColor = [0 0 1];
-xdata = GR_h.XData;
-ydata = GR_h.YData;
-GR_h.LineStyle = lstyle;
-GR_h.EdgeColor = ecolor;
+% GR_h.NodeLabel = {};
+% GR_h.EdgeAlpha = 1;
+% GR_h.EdgeColor = [0 0 1];
+% xdata = GR_h.XData;
+% ydata = GR_h.YData;
+% GR_h.LineStyle = lstyle;
+% GR_h.EdgeColor = ecolor;
 
-if yinput ~=0
-    GR_h.XData = xinput;
-    GR_h.YData = yinput;
-end
+% if yinput ~=0
+%     GR_h.XData = xinput;
+%     GR_h.YData = yinput;
+% end
 
 % Number of clusters
 [~, CGR] = conncomp(GR);
