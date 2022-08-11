@@ -67,7 +67,32 @@ mu = 1e-3;          % Mutation rate
 T = 500;            % Number of generations
 GC = 0.05*C;
 
-parfor mm = 2: 75
-     P = assor_fn(M, F, C, A, mu, T, GC, mm);   
-end
+% parfor mm = 2: 75
+%      P = assor_fn(M, F, C, A, mu, T, GC, mm);   
+% end
 
+%% Assort (Fig 06 b)
+clc, clearvars, close all
+M = 500;            % Number of individuals
+F = 2500;            % Genes per individual
+C = 100;
+A = 1000;
+mu = 1e-3;          % Mutation rate
+T = 500;            % Number of generations
+GC = 0.05*C;
+mm = 1;             % Run index
+
+P = assor_fn(M, F, C, A, mu, T, GC, mm);
+
+%% Assort (Fig 06 b)
+clc, clearvars, close all
+M = 500;            % Number of individuals
+F = 2500;            % Genes per individual
+C = 100;
+A = 2400;
+mu = 1e-3;          % Mutation rate
+T = 500;            % Number of generations
+GC = 0.05*C;
+mm = 1;             % Run index
+
+P = assor_fn(M, F, C, A, mu, T, GC, mm);

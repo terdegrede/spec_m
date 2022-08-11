@@ -55,14 +55,14 @@ axis square
 drawnow
 end
 %% Assortativity
-% Histogram animation
+% Fig 5a
 
 clc, clearvars, close all
 M = 500;            % Number of individuals
 F = 2500;            % Genes per individual
 C = 100;
 A = 100;
-mu = 1e-3;%2.5e-3;          % Mutation rate
+mu = 1e-3;         % Mutation rate
 T = 500;            % Number of generations
 GC = 0.05*C;
 mm = 1;             % Run index
@@ -71,7 +71,49 @@ mm = 1;             % Run index
 ax = [0 1 0 0.25];
 % Full genome
 figure
-for t = 0: T
-h = hists_fn(M, F, C, A, t, mu, GC, mm, ax, 'overlap', 'sexu');
+for t = 0: 500
+h = hists_fn(M, F, C, A, t, mu, GC, mm, ax, 'hamming', 'asex');
+drawnow
+end
+
+%% Assortativity
+% Fig 5b
+clc, clearvars, close all
+M = 500;            % Number of individuals
+F = 2500;            % Genes per individual
+C = 100;
+A = 1000;
+mu = 1e-3;         % Mutation rate
+T = 500;            % Number of generations
+GC = 0.05*C;
+mm = 1;             % Run index
+
+% Histogram animationS
+ax = [0 1 0 0.25];
+% Full genome
+figure
+for t = 0: 500
+h = hists_fn(M, F, C, A, t, mu, GC, mm, ax, 'hamming', 'asex');
+drawnow
+end
+
+%% Assortativity
+% Fig 5c
+clc, clearvars, close all
+M = 500;            % Number of individuals
+F = 2500;            % Genes per individual
+C = 100;
+A = 2400;
+mu = 1e-3;         % Mutation rate
+T = 500;            % Number of generations
+GC = 0.05*C;
+mm = 1;             % Run index
+
+% Histogram animationS
+ax = [0 1 0 0.25];
+% Full genome
+figure
+for t = 0: 500
+h = hists_fn(M, F, C, A, t, mu, GC, mm, ax, 'hamming', 'asex');
 drawnow
 end
